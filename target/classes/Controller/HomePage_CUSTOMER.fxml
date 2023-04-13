@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@UserType.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerHomePageController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="900.0">
+            <left>
+                <AnchorPane prefHeight="427.0" prefWidth="290.0" stylesheets="@UserType.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="109.0" fitWidth="293.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Picture1.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="317.0" fitWidth="293.0" layoutX="8.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Logs.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="Back" layoutY="-4.0" mnemonicParsing="false" onAction="#goBack3" style="-fx-background-color: TRANSPARENT; -fx-background-image: &quot;C:\Users\syeda\OneDrive\Desktop\Semester 4\demo\src\main\resources\com\example\demo\Back.png&quot;;" text="&lt;----">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <Pane prefHeight="427.0" prefWidth="334.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="14.0" layoutY="24.0" prefHeight="24.0" prefWidth="312.0" text="Customer Home Page" textFill="#663a82">
+                            <font>
+                                <Font name="Segoe MDL2 Assets" size="22.0" />
+                            </font>
+                        </Label>
+                        <TabPane layoutX="19.0" layoutY="92.0" prefHeight="433.0" prefWidth="555.0" style="-fx-background-color: #CEC2EB;" tabClosingPolicy="UNAVAILABLE">
+                            <tabs>
+                                <Tab text="Track Order Status">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <ComboBox fx:id="Orders" layoutX="155.0" layoutY="125.0" prefHeight="26.0" prefWidth="250.0" promptText="Orders" />
+                                                <Button fx:id="TrackOrderButton" layoutX="221.0" layoutY="202.0" mnemonicParsing="false" onAction="#TrackOrder" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #663a82;" text="Track" textFill="WHITE" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="Complain &amp; Feedback">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <Button fx:id="Complain" layoutX="218.0" layoutY="364.0" mnemonicParsing="false" onAction="#Complain" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #663a82;" text="Complain" textFill="WHITE" />
+                                    <ComboBox fx:id="Orders1" layoutX="153.0" layoutY="50.0" prefHeight="26.0" prefWidth="250.0" promptText="Orders" />
+                                    <TextArea fx:id="Complains" layoutX="13.0" layoutY="97.0" prefHeight="238.0" prefWidth="530.0" promptText="Write Here" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="Long Term Contracs">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                    </children>
+                </Pane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

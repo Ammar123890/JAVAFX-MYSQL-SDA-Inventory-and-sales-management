@@ -1,0 +1,28 @@
+
+
+# Java JAR files
+*.jar
+
+# Java compiled bytecode
+*.jks
+
+# JavaFX build artifacts
+out/
+build/
+dist/
+bin/
+nbproject/private/
+nbbuild/
+nbdeploy/
+build.xml
+nbactions.xml
+nb-configuration.xml
+
+# IDE-specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+*.log
+*.swp
+*.DS_Store

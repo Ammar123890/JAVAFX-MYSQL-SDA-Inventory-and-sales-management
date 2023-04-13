@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@UserType.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminListController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="900.0">
+            <left>
+                <AnchorPane prefHeight="427.0" prefWidth="290.0" stylesheets="@UserType.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="109.0" fitWidth="293.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Picture1.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="317.0" fitWidth="293.0" layoutX="8.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Logs.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="SuperAdminback" layoutY="-4.0" mnemonicParsing="false" onAction="#goBack2" style="-fx-background-color: TRANSPARENT; -fx-background-image: &quot;C:\Users\syeda\OneDrive\Desktop\Semester 4\demo\src\main\resources\com\example\demo\Back.png&quot;;" text="&lt;----">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <Pane prefHeight="427.0" prefWidth="334.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="14.0" layoutY="24.0" prefHeight="24.0" prefWidth="246.0" text="Super Admin Home Page" textFill="#663a82">
+                            <font>
+                                <Font name="Segoe MDL2 Assets" size="22.0" />
+                            </font>
+                        </Label>
+                  <Label layoutX="14.0" layoutY="63.0" text="List of admins" textFill="#663a82" />
+                  <TableView fx:id="AdminList" layoutY="113.0" prefHeight="488.0" prefWidth="594.0">
+                    <columns>
+                      <TableColumn fx:id="EmailCol" prefWidth="292.0" text="Email" />
+                      <TableColumn fx:id="PasswordCol" prefWidth="300.800048828125" text="Password" />
+                    </columns>
+                  </TableView>
+                    </children>
+                </Pane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
